@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boton Plus Pagos</title>
+
+    <style>
+      form {
+        max-width: 500px;
+      }
+      input {
+        width: 100%;
+        display: block;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Prueba del boton integrado</h1>
+    <br />
+    <form method="post" action="https://sandboxpp.asjservicios.com.ar/">
+      <input
+        type="hidden"
+        name="CallbackSuccess"
+        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+      />
+      <input
+        type="hidden"
+        name="CallbackCancel"
+        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+      />
+      <input
+        type="hidden"
+        name="Comercio"
+        value="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+      />
+      <input
+        type="hidden"
+        name="SucursalComercio"
+        value="WRc5LDcZyNDVykouWjysfV4+skt1lf55z9eBanWaqOyNrcznN1uBjEvj4"
+      />
+      <input
+        type="hidden"
+        name="Hash"
+        value="4be6253c592a60c3ffb27acc9d130908b05f7e10fd3ae671d326b5224e69dff6"
+      />
+      <input type="hidden" name="TransaccionComercioId" value="abc001" />
+      <label>Monto: </label>
+      <input
+        type="text"
+        name="Monto"
+        value="9G3kuKBjQEv3qXWHUFr1hX/dukOKa4j2uYGvciwaLeI="
+      />
+      <label>Producto 1: </label>
+      <input type="text" name="Producto[0]" value="Descripción artículo N°1" />
+      <label>Producto 2: </label>
+      <input type="text" name="Producto[1]" value="Descripción artículo N°2" />
+      <label>Producto 3: </label>
+      <input type="text" name="Producto[2]" value="Descripción artículo N°3" />
+
+      <label>Informacion: </label>
+      <input
+        type="text"
+        name="Informacion"
+        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+      />
+
+      <input type="hidden" name="ClientData.CUIT" value="23456456769" />
+      <input
+        type="hidden"
+        name="ClientData.NombreApellido"
+        value="Pedro Martinez"
+      />
+      <button type="submit">ENVIAR</button>
+    </form>
+  </body>
+</html>
