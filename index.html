@@ -7,6 +7,7 @@
 
     <style>
       form {
+        margin: auto;
         max-width: 500px;
       }
       input {
@@ -24,35 +25,31 @@
       <input
         type="hidden"
         name="CallbackSuccess"
-        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+        value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
       />
       <input
         type="hidden"
         name="CallbackCancel"
-        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+        value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
       />
       <input
         type="hidden"
         name="Comercio"
-        value="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"
+        value="66651493-75eb-4d81-a2ce-fa241ff1289d"
       />
       <input
         type="hidden"
         name="SucursalComercio"
-        value="WRc5LDcZyNDVykouWjysfV4+skt1lf55z9eBanWaqOyNrcznN1uBjEvj4"
+        value="DenGpwr7zkYcPofyFMibFg=="
       />
       <input
         type="hidden"
         name="Hash"
-        value="4be6253c592a60c3ffb27acc9d130908b05f7e10fd3ae671d326b5224e69dff6"
+        value="zrCJUpCfb2lk1Plzlv+tqugnj1J7i2dY/kUG77yUr0E="
       />
       <input type="hidden" name="TransaccionComercioId" value="abc001" />
       <label>Monto: </label>
-      <input
-        type="text"
-        name="Monto"
-        value="9G3kuKBjQEv3qXWHUFr1hX/dukOKa4j2uYGvciwaLeI="
-      />
+      <input type="text" name="Monto" value="RkpjVLiLk8r7ObAx+9h++A==" />
       <label>Producto 1: </label>
       <input type="text" name="Producto[0]" value="Descripción artículo N°1" />
       <label>Producto 2: </label>
@@ -60,12 +57,12 @@
       <label>Producto 3: </label>
       <input type="text" name="Producto[2]" value="Descripción artículo N°3" />
 
-      <label>Informacion: </label>
-      <input
+      <!-- <label>Informacion: </label> -->
+      <!-- <input
         type="text"
         name="Informacion"
         value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
-      />
+      /> -->
 
       <input type="hidden" name="ClientData.CUIT" value="23456456769" />
       <input
@@ -74,6 +71,59 @@
         value="Pedro Martinez"
       />
       <button type="submit">ENVIAR</button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+      <!-- <script>
+        let $successPage = document.getElementsByName("CallbackSuccess");
+        let $errorPage = document.getElementsByName("CallbackCancel");
+        let $monto = document.getElementsByName("Monto");
+
+        let code = (function () {
+          return {
+            encryptMessage: function (messageToencrypt = "", secretkey = "") {
+              var encryptedMessage = CryptoJS.AES.encrypt(
+                messageToencrypt,
+                secretkey
+              );
+              return encryptedMessage.toString();
+            },
+            decryptMessage: function (encryptedMessage = "", secretkey = "") {
+              var decryptedBytes = CryptoJS.AES.decrypt(
+                encryptedMessage,
+                secretkey
+              );
+              var decryptedMessage = decryptedBytes.toString(CryptoJS.enc.Utf8);
+
+              return decryptedMessage;
+            }
+          };
+        })();
+
+        // console.log(
+        //   code.encryptMessage(
+        //     "https://emacrzz.github.io/boton-plus-pagos/",
+        //     "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
+        //   )
+        // );
+        $monto.value = code.encryptMessage(
+          "94300",
+          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
+        );
+        $successPage.value = code.encryptMessage(
+          "https://emacrzz.github.io/boton-plus-pagos/",
+          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
+        );
+        $errorPage.value = code.encryptMessage(
+          "https://emacrzz.github.io/boton-plus-pagos/",
+          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
+        );
+        // console.log(
+        //   code.decryptMessage(
+        //     "U2FsdGVkX1/S5oc9WgsNyZb8TJHsuL7+p4yArjEpOCYgDTUdkVxkmr+E+NdJmro9",
+        //     "your_password"
+        //   )
+        // );
+      </script> -->
     </form>
   </body>
 </html>
