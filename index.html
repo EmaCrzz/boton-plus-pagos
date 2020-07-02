@@ -8,12 +8,18 @@
     <style>
       form {
         margin: auto;
-        max-width: 500px;
+        max-width: 800px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 23px;
       }
       input {
         width: 100%;
         display: block;
         margin-bottom: 1em;
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -22,108 +28,110 @@
     <h1>Prueba del boton integrado</h1>
     <br />
     <form method="post" action="https://sandboxpp.asjservicios.com.ar/">
-      <input
-        type="hidden"
-        name="CallbackSuccess"
-        value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
-      />
-      <input
-        type="hidden"
-        name="CallbackCancel"
-        value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
-      />
-      <input
-        type="hidden"
-        name="Comercio"
-        value="66651493-75eb-4d81-a2ce-fa241ff1289d"
-      />
-      <input
-        type="hidden"
-        name="SucursalComercio"
-        value="DenGpwr7zkYcPofyFMibFg=="
-      />
-      <input
-        type="hidden"
-        name="Hash"
-        value="zrCJUpCfb2lk1Plzlv+tqugnj1J7i2dY/kUG77yUr0E="
-      />
-      <input type="hidden" name="TransaccionComercioId" value="abc001" />
-      <label>Monto: </label>
-      <input type="text" name="Monto" value="RkpjVLiLk8r7ObAx+9h++A==" />
-      <label>Producto 1: </label>
-      <input type="text" name="Producto[0]" value="Descripción artículo N°1" />
-      <label>Producto 2: </label>
-      <input type="text" name="Producto[1]" value="Descripción artículo N°2" />
-      <label>Producto 3: </label>
-      <input type="text" name="Producto[2]" value="Descripción artículo N°3" />
-
-      <!-- <label>Informacion: </label> -->
-      <!-- <input
-        type="text"
-        name="Informacion"
-        value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
-      /> -->
-
-      <input type="hidden" name="ClientData.CUIT" value="23456456769" />
-      <input
-        type="hidden"
-        name="ClientData.NombreApellido"
-        value="Pedro Martinez"
-      />
+      <div class="container">
+        <div>
+          <label for="CallbackSuccess">CallbackSuccess</label>
+          <input
+            id="CallbackSuccess"
+            name="CallbackSuccess"
+            value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
+          />
+        </div>
+        <div>
+          <label for="CallbackCancel">CallbackCancel</label>
+          <input
+            id="CallbackCancel"
+            name="CallbackCancel"
+            value="NISvuDbiYG+FkqOH/9XCeAePO3oDwD6/NfQZneAJ3YPe23nvF5HfmoxhQPoWmN1U"
+          />
+        </div>
+        <div>
+          <label for="Comercio">Comercio</label>
+          <input
+            id="Comercio"
+            name="Comercio"
+            value="66651493-75eb-4d81-a2ce-fa241ff1289d"
+          />
+        </div>
+        <div>
+          <label for="SucursalComercio">SucursalComercio</label>
+          <input
+            id="SucursalComercio"
+            name="SucursalComercio"
+            value="DenGpwr7zkYcPofyFMibFg=="
+          />
+        </div>
+        <div>
+          <label for="Hash">Hash</label>
+          <input
+            id="Hash"
+            name="Hash"
+            value="zrCJUpCfb2lk1Plzlv+tqugnj1J7i2dY/kUG77yUr0E="
+          />
+        </div>
+        <div>
+          <label for="TransaccionComercioId">TransaccionComercioId</label>
+          <input
+            id="TransaccionComercioId"
+            name="TransaccionComercioId"
+            value="abc001"
+          />
+        </div>
+        <div>
+          <label for="Monto">Monto: </label>
+          <input
+            id="Monto"
+            type="text"
+            name="Monto"
+            value="RkpjVLiLk8r7ObAx+9h++A=="
+          />
+        </div>
+        <div>
+          <label for="Producto_1">Producto 1: </label>
+          <input
+            id="Producto_1"
+            type="text"
+            name="Producto[0]"
+            value="Descripción artículo N°1"
+          />
+        </div>
+        <div>
+          <label for="Producto_2">Producto 2: </label>
+          <input
+            id="Producto_2"
+            type="text"
+            name="Producto[1]"
+            value="Descripción artículo N°2"
+          />
+        </div>
+        <div>
+          <label for="Producto_3">Producto 3: </label>
+          <input
+            type="text"
+            id="Producto_3"
+            name="Producto[2]"
+            value="Descripción artículo N°3"
+          />
+        </div>
+        <div>
+          <label for="info">Informacion: </label>
+          <input
+            id="info"
+            type="text"
+            name="Informacion"
+            value="vhOBWNrIATF5r3Td5++2iEPPyoTVO12AZTF2hqC4KRY="
+          />
+        </div>
+        <div>
+          <label for="cuit">CUIT: </label>
+          <input name="ClientData.CUIT" id="cuit" value="23456456769" />
+        </div>
+        <div>
+          <label for="nombre">NombreApellido: </label>
+          <input name="ClientData.NombreApellido" value="Pedro Martinez" />
+        </div>
+      </div>
       <button type="submit">ENVIAR</button>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-      <!-- <script>
-        let $successPage = document.getElementsByName("CallbackSuccess");
-        let $errorPage = document.getElementsByName("CallbackCancel");
-        let $monto = document.getElementsByName("Monto");
-
-        let code = (function () {
-          return {
-            encryptMessage: function (messageToencrypt = "", secretkey = "") {
-              var encryptedMessage = CryptoJS.AES.encrypt(
-                messageToencrypt,
-                secretkey
-              );
-              return encryptedMessage.toString();
-            },
-            decryptMessage: function (encryptedMessage = "", secretkey = "") {
-              var decryptedBytes = CryptoJS.AES.decrypt(
-                encryptedMessage,
-                secretkey
-              );
-              var decryptedMessage = decryptedBytes.toString(CryptoJS.enc.Utf8);
-
-              return decryptedMessage;
-            }
-          };
-        })();
-
-        // console.log(
-        //   code.encryptMessage(
-        //     "https://emacrzz.github.io/boton-plus-pagos/",
-        //     "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
-        //   )
-        // );
-        $monto.value = code.encryptMessage(
-          "94300",
-          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
-        );
-        $successPage.value = code.encryptMessage(
-          "https://emacrzz.github.io/boton-plus-pagos/",
-          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
-        );
-        $errorPage.value = code.encryptMessage(
-          "https://emacrzz.github.io/boton-plus-pagos/",
-          "AMPROER_579a809c-13ba-46b3-ae68-c61abbc1c972"
-        );
-        // console.log(
-        //   code.decryptMessage(
-        //     "U2FsdGVkX1/S5oc9WgsNyZb8TJHsuL7+p4yArjEpOCYgDTUdkVxkmr+E+NdJmro9",
-        //     "your_password"
-        //   )
-        // );
-      </script> -->
     </form>
   </body>
 </html>
